@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css">
-    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css">
-    <link rel="icon" href="../static/images/icon.png" />
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="{{ url_for('static', filename="scripts/1-hbnb.js" + ? + cache_id) }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/4-common.css") }}?{{ cache_id }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/3-header.css") }}?{{ cache_id }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/3-footer.css") }}?{{ cache_id }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/6-filters.css") }}?{{ cache_id }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles/8-places.css") }}?{{ cache_id }}">
+    <link rel="icon" href="{{ url_for('static', filename="images/icon.png") }}?{{ cache_id }}">
     <title>HBnB</title>
   </head>
   <body>
