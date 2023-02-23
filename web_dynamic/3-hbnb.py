@@ -38,9 +38,9 @@ def hbnb_fetch_places():
 
     return render_template('3-hbnb.html',
                            states=st_ct,
-                           cache_id=cache_id)
-                           #amenities=amenities)
-                           #places=places)
+                           cache_id=cache_id,
+                           amenities=amenities,
+                           places=places)
 
 
 if __name__ == "__main__":
