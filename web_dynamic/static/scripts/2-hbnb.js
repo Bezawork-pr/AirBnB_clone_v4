@@ -1,4 +1,15 @@
 $(function () {
+  $.get('http://0.0.0.0:5001/api/v1/status', function (data, txt_status) {
+    const elem = $('div#api_status');
+    if (data.status == 'OK') {
+      elem.addClass('available');
+    } else {
+      if (elem.hasClass('available')) {
+        elem.removeClass('available');
+      }
+    }
+  });
+
   const amenities_js = {};
 
   $('input').click(function (e) {
