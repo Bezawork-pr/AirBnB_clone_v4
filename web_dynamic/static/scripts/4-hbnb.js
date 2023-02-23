@@ -12,7 +12,7 @@ $(function () {
 
   $('section.filters button').click(function (e) {
     const amenities = [];
-    $('input[type=checkbox]').each(function (e) {
+    $('.amenities input[type=checkbox]').each(function (e) {
       const elem = $(this);
       if (elem.is(':checked')) {
         amenities.push(elem.attr('data-id'));
@@ -20,7 +20,6 @@ $(function () {
     });
 
     // send api request
-    console.log('amenities requested: ', amenities);
     searchPlaces({ amenities });
   });
 
