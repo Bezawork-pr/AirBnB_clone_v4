@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<script src="jquery-3.6.3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="{{ url_for('static', filename="scripts/1-hbnb.js") }}?{{ cache_id }}"></script>
 		<link rel="stylesheet" href="{{ url_for('static', filename="styles/4-common.css") }}?{{ cache_id }}">
 		<link rel="stylesheet" href="{{ url_for('static', filename="styles/3-header.css") }}?{{ cache_id }}">
@@ -38,7 +38,7 @@
 				</div>
 				<div class="amenities">
 					<h3>Amenities</h3>
-					<h4>&nbsp;</h4>
+					<h4 id="selected_amenity">&nbsp;</h4>
 					<div class="popover">
 						<ul>
 							{% for amenity in amenities %}

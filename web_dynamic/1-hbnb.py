@@ -19,10 +19,9 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/1-hbnb', strict_slashes=False)
-def hbnb_one():
+@app.route('/1-hbnb/', strict_slashes=False)
+def hbnb_dynamic():
     """ HBNB is alive! """
-    print("Do u get here")
     states = storage.all(State).values()
     states = sorted(states, key=lambda k: k.name)
     st_ct = []
